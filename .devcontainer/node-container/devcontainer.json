@@ -5,8 +5,15 @@
   "workspaceFolder": "/workspace/frontend-oauth2",
   "remoteUser": "root",
   "postCreateCommand": "bash /workspace/.devcontainer/node-container/setup.sh",
-//   "postStartCommand": "mvn clean install && mvn spring-boot:run",
-
+  "postStartCommand": "pnpm dev",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "shutdownAction": "none",
   "customizations": {
     "vscode": {
       "extensions": [

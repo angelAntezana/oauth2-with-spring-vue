@@ -4,16 +4,12 @@
   "service": "java-api",
   "workspaceFolder": "/workspace/backend-oauth2",
   "remoteUser": "root",
-
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
-
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "java -version",
   "postCreateCommand": "bash /workspace/.devcontainer/java-container/setup.sh",
-//   "postStartCommand": "mvn clean install && mvn spring-boot:run",
-
-  // Configure tool-specific properties.
+  "postStartCommand": "mvn clean install && mvn spring-boot:run",
+  "shutdownAction": "none",
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
@@ -30,7 +26,4 @@
       ]
     }
   }
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
 }
