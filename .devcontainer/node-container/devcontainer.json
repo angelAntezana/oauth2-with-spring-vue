@@ -1,0 +1,20 @@
+{
+  "name": "Container Frontend Oauth2",
+  "dockerComposeFile": ["../../docker-compose.yml"],
+  "service": "node-app",
+  "workspaceFolder": "/workspace/frontend-oauth2",
+  "remoteUser": "root",
+  "postCreateCommand": "bash /workspace/.devcontainer/node-container/setup.sh",
+//   "postStartCommand": "mvn clean install && mvn spring-boot:run",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vue.volar",
+        "usernamehw.errorlens",
+        "pkief.material-icon-theme",
+        "eamodio.gitlens"
+      ]
+    }
+  }
+}

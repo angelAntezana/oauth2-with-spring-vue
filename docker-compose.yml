@@ -1,0 +1,14 @@
+version: "3"
+services:
+  java-api:
+    image: mcr.microsoft.com/devcontainers/java:21-bookworm
+    volumes:
+      - .:/workspace
+    command: sleep infinity
+  
+  node-app:
+    image: node:22
+    volumes:
+      - .:/workspace
+    command: sleep infinity
+  ### Postgres database for Featureflag
